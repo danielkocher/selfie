@@ -3113,9 +3113,8 @@ uint64_t vdsprintf(uint64_t fd, char* buffer, char* s, uint64_t* args) {
   if (buffer) {
     output_buffer = buffer;
     output_cursor = 0;
-  } else {
+  } else
     output_fd = fd;
-  }
 
   number_of_put_characters = 0;
 
