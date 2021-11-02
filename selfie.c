@@ -3108,11 +3108,12 @@ uint64_t vdsprintf(uint64_t fd, char* buffer, char* s, uint64_t* args) {
   uint64_t save_fd;
   uint64_t i;
 
+  save_fd = output_fd;
+
   if (buffer) {
     output_buffer = buffer;
     output_cursor = 0;
   } else {
-    save_fd   = output_fd;
     output_fd = fd;
   }
 
